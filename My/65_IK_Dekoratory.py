@@ -7,9 +7,11 @@ def my_decorator(fn):
 
 @my_decorator
 def get_5_values():
-    for v in range(1,6):
-        print(v)
+    my_list = [v for v in range(1, 10)]
+    print(my_list)
 
 get_5_values()
 
-# my_decorator(get_5_values)()
+print("===" * 10)
+# Using the decorator without @ syntax
+my_decorator(get_5_values)()
